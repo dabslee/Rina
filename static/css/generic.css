@@ -1,0 +1,64 @@
+@import url("fonts.css");
+
+body {
+    background: linear-gradient(rgb(222, 242, 255), white);
+    overflow: hidden;
+    font-family: 'VarelaRound';
+}
+
+#centerpiece_container {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+#centerpiece {
+    height: 100%;
+    width: 60%;
+    background-color: white;
+    padding: 100px;
+}
+
+.background_bubble {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(213, 240, 255);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+h1 {
+    font-size: 120px;
+    font-family: 'GlamourGirl';
+    margin-bottom: -20px;
+    margin-top: 40px;
+}
+
+#titlebar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    bottom: 0;
+    width: 250px;
+    margin-top: 100px;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(0, 103, 143);
+    transition: 0.5s;
+}
+a:hover {
+    opacity: 0.5;
+}

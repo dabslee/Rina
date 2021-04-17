@@ -1,0 +1,20 @@
+{% load static %}
+
+<head>
+    <title>Rina ♡ - Log in or sign up!</title>
+    <link rel="shortcut icon" href="{% static 'assets/img/favicon.ico' %}" type="image/x-icon">
+	<link rel="stylesheet" href="{% static 'css/splash.css' %}">
+</head>
+<body>
+    <img id="rina" src="{% static 'assets/img/rina/neutral.png' %}">
+    <div id="background_bubbles"></div>
+	<script src="{% static 'js/bubbles.js' %}"></script>
+    <div id="back_slider"></div>
+    <div id="back_slider_copy">
+        <div id="title">Rina</div>
+        <div id="welcome">Digital Supporter <3</div>
+        <div onclick="window.location='{% url 'authentication:login' %}'" class="button">Log in</div>
+        <div onclick="window.location='{% url 'authentication:signup' %}'" class="button">Sign up</div>
+    </div>
+    <div id="footertext">© <a href="http://brandonssandbox.com/">Brandon Lee</a> 2021 • <a href="{% url 'about' %}">About</a> • Donate</div>
+</body>

@@ -1,0 +1,26 @@
+{% load static %}
+
+<head>
+    <title>Rina ♡ - About</title>
+    <link rel="shortcut icon" href="{% static 'assets/img/favicon.ico' %}" type="image/x-icon">
+	<link rel="stylesheet" href="{% static 'css/generic.css' %}">
+</head>
+<body>
+    <div id="background_bubbles"></div>
+	<script src="{% static 'js/bubbles.js' %}"></script>
+    <div id="centerpiece_container">
+        <div id="centerpiece">
+            <div id="titlebar">
+                <h1>Rina</h1>
+                <div id="navbar">
+                    <a href="{% url 'splash' %}">Home</a>
+                    <a href="{% url 'about' %}">About</a>
+                    <a href="#">Donate</a>
+                </div>
+            </div>
+            <hr>
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+</body>

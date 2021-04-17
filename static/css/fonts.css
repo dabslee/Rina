@@ -12,3 +12,8 @@
     font-family: 'Vacaciones';
     src: url('../assets/fonts/Vacaciones-font-ffp-defharo.ttf');
 }
+
+@font-face {
+    font-family: 'GlamourGirl';
+    src: url('../assets/fonts/GLAMOURGIRL.TTF');
+}
