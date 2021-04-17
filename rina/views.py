@@ -1,11 +1,11 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
-def index(request):
-    if request.user.is_authenticated:
-        return redirect('splash')
-    else:
-        return render(request, 'index.html', {})
-
 def splash(request):
-    return render(request, 'splash.html', {})
+    if request.user.is_authenticated:
+        return redirect('index')
+    else:
+        return render(request, 'splash.html', {})
+
+def index(request):
+    return render(request, 'index.html', {})

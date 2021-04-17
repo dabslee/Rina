@@ -6,6 +6,9 @@
     {% csrf_token %}
     <p>Username: {{ form.username }}</p>
     <p>Password: {{ form.password }}</p>
+    {% if form.errors %}
+    <p style="color:red">Username or password not correct</p>
+    {% endif %}
     <br>
     <button class="fancyButton" type="submit">Login</button>
   </form>
