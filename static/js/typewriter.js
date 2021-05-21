@@ -33,14 +33,9 @@ document.addEventListener('keyup', (e) => {
 });
 
 /* Public functions */
-var startTyping = function() {
+export var startTyping = function() {
     if (buffer.length > 0) value = buffer.shift();
 }
-var dialoguePrint = function(input) {
+export var dialoguePrint = function(input) {
     buffer.push(input);
 }
-
-dialoguePrint("<<Press space to talk to Rina.>>");
-dialoguePrint("Hello! I'm Rina, your devoted digital assistant.");
-dialoguePrint("I look forward to working with you!");
-startTyping();
