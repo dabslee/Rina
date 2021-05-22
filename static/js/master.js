@@ -74,3 +74,25 @@ function activity_alarm() {
         ui.display("The alarm has been removed!");
     }
 }
+function activity_notes() {
+    var userChoice = ui.buttonInput("", ["View existing notes", "Create new note", "Delete a note"]);
+    if (userChoice == "View existing note") {
+        var notes = dm.getQuery_all("Notes_notes");
+        ui.display(`You have ${notes.length} notes set up.`);
+        var notetitles = "";
+        for (note of notes) {
+            notetitles += `${note.get("title")}\n`;
+        }
+        ui.display(`Here are the note titles:\n${notetitles}`);
+    } else if (userChoice == "Create new note") {
+        var time = ui.textInput("What do you want to title the note?");
+        var note = ui.textAreaInput("And what should the note be?");
+        dm.instantiateModel("Notes_notes", {"title":title, "note":note});
+        ui.display("Your note has been created.");
+    } else if (userChoice == "Delete a note") {
+        var time = ui.textInput("What is the note's title?");
+        var title = dm.getQuery_where("Notes_notes", {"title":title});
+        dm.removeQuery_where("Notes_notes", {"title":title});
+        ui.display("The note has been removed!");
+    }
+}
