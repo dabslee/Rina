@@ -20,7 +20,7 @@ class OptionsButton extends React.Component {
         }
 
         return (
-            <div onClick={() => this.setState({ options_open: true })} className="options_button">☰</div>
+            <div onClick={() => this.setState({ options_open: true })} className="options_button">&#9776;</div>
         )
     }
 }
