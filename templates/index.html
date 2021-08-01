@@ -1,11 +1,13 @@
 {% load static %}
 
 <head>
-	<title>Rina ♡</title>
+	<!-- jquery, react, babel (for react) CDNs -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+	<title>Rina ♡</title>
 	<link rel="shortcut icon" href="{% static 'assets/img/favicon.ico' %}" type="image/x-icon">
 	<link rel="stylesheet" href="{% static 'css/index.css' %}">
-	<!--<script src="{% static 'js/music.js' %}" crossorigin></script>-->
 </head>
 <body>
 	<div id="background_bubbles"></div>
@@ -20,6 +22,6 @@
 
 	<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
 	<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
-	<script src="{% static 'js/options.js' %}" crossorigin></script>
-	<script type="module" src="{% static 'js/master.js' %}"></script>
+
+	<script src="{% static 'js/options.js' %}" type="text/babel" crossorigin></script>
 </body>
